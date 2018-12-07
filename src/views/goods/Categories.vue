@@ -116,12 +116,15 @@ export default{
     TreeGrid: TreeGrid
   },
   mounted () {
-    getGoodsCategories(3).then(res => {
-      // console.log(res)
-      this.cateList = res.data
-    })
+    this.init(3)
   },
   methods: {
+    init (type) {
+      getGoodsCategories(type).then(res => {
+      // console.log(res)
+        this.cateList = res.data
+      })
+    },
     addCateSumit () {
       // console.log(111)
       addCate(this.addform).then(res => {
@@ -129,6 +132,7 @@ export default{
         if (res.meta.status === 201) {
           this.$message.success('添加成功')
           this.adddialogFormVisible = false
+          this.init(3)
         }
       })
     },

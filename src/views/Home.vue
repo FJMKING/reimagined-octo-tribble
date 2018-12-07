@@ -36,7 +36,7 @@
           <a href="javascript:;" class="myicon myicon-menu toggle-btn" @click="collapse=!collapse"></a>
           <div class="system-title">电商后台管理系统</div>
           <div>
-            <span class="welcome">你好：***</span>
+            <span class="welcome">你好：{{this.$store.username}}</span>
             <span><el-button type="text" @click="logout">退出</el-button></span>
           </div>
         </el-header>

@@ -51,6 +51,8 @@ export default{
         if (valid) {
           login(this.loginForm).then((results) => {
             if (results.meta.status === 200) {
+              // 将用户名存储到store
+              this.$store.dispatch('setUserNameAction', results.data.username)
               // 登录成功存储token信息，跳转到首页
               localStorage.setItem('itcast-token', results.data.token)
               this.$router.push({name: 'home'})

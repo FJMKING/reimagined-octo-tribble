@@ -88,7 +88,12 @@
           <el-tab-pane
             label="商品属性"
             name="2"
-          >商品属性</el-tab-pane>
+          >
+
+    <div class="amap-wrapper">
+      <el-amap class="amap-box" :vid="'amap-vue'"></el-amap>
+    </div>
+          </el-tab-pane>
           <el-tab-pane
             label="商品图片"
             name="3"
@@ -268,5 +273,9 @@ export default {
   .ql-container{
   height: 200px;
   }
+}
+.amap-wrapper {
+  width: 500px;
+  height: 500px;
 }
 </style>
