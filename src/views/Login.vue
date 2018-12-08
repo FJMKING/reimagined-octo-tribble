@@ -55,6 +55,7 @@ export default{
               this.$store.dispatch('setUserNameAction', results.data.username)
               // 登录成功存储token信息，跳转到首页
               localStorage.setItem('itcast-token', results.data.token)
+              // localStorage.setItem('username', results.data.username)
               this.$router.push({name: 'home'})
             } else {
               this.$message({showClose: true, message: results.meta.msg, type: 'error'})

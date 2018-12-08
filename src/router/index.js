@@ -10,6 +10,7 @@ import Goods from '@/views/goods/Goods'
 import Lists from '@/views/goods/Lists'
 import Add from '@/views/goods/Add'
 import Categories from '@/views/goods/Categories'
+import Reports from '@/reports/reports'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: 'categories',
       name: 'Categories',
       component: Categories
+    },
+    {
+      path: 'reports',
+      name: 'Reports',
+      component: Reports
     }
     ]
   }

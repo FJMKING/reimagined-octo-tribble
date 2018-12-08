@@ -10,21 +10,26 @@ const mutations = {
   // 操作state中数据的函数集合
   setUserName (state, name) {
     state.username = name
-  },
-  getUserName (state) {
-    return state.username
+    localStorage.setItem('temp', name)
   }
+  // getUserName (state) {
+  //   return state.username
+  // }
 }
 const actions = {
   // 触发mutations中函数的处理函数
   setUserNameAction: ({commit}, name) => {
     commit('setUserName', name)
-  },
-  getUserNameAction: ({commit}) => {
-    commit('getUserName')
+  }
+  // getUserNameAction: ({commit}) => {
+  //   commit('getUserName')
+  // }
+}
+const getters = {
+  getUserName: (state) => {
+    return localStorage.getItem('temp')
   }
 }
-const getters = {}
 export default new Vuex.Store({
   state,
   getters,

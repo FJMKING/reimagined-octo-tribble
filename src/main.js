@@ -12,8 +12,10 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 import store from '@/store/store'
+import ECharts from 'vue-echarts'
 // 引入vue-amap
 import VueAMap from 'vue-amap'
+Vue.component('chart', ECharts)
 Vue.use(VueAMap)
 Vue.use(VueQuillEditor)
 Vue.config.productionTip = false
